@@ -3,12 +3,13 @@
 
 @define-variant dark (&:where(.dark, .dark *));
 
+
 *{
   font-family: "Rethink Sans", sans-serif;
 }
 
 body{
-  @apply dark:bg-slate-950;
+  @apply dark:bg-slate-950 dark:text-white;
 }
 
 
