@@ -12,7 +12,8 @@ interface InputProps {
     max?: string | number;
 }
 
-export default function Input({ label, type = 'text', value, onChange, placeholder = '', className = '', required = false, min, max }: InputProps) {
+export default function Input({ label, type = 'text', value, onChange, placeholder = '', className = '', required = false, min, max }
+    : InputProps) {
     return (
         <div className={`space-y-2 ${className}`}>
             {label && (
