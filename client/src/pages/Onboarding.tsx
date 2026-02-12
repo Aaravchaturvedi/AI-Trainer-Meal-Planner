@@ -7,6 +7,7 @@ import type { ProfileFormData, UserData } from "../types"
 import Input from "../components/ui/Input"
 import Button from "../components/ui/Button"
 import mockApi from "../assets/mockApi"
+import Slider from "../components/ui/Slider"
 
 
 const Onboarding = () => {
@@ -169,6 +170,17 @@ const Onboarding = () => {
               <div className="border-t border-slate-200 dark:border-slate-700 my-6 max-w-lg"></div>
 
               {/* Daily Targets */}
+              <div className="space-y-8 max-w-lg">
+                <h3 className="text-md font-medium text-slate-800 dark:text-white mb-4">Daily Targets</h3>
+
+                <div className="space-y-6">
+                  <Slider label="Daily Calorie Intake" min={120} max={4000} step={50} value={formData.dailyCalorieIntake} 
+                  onChange={(v)=>updateField('dailyCalorieIntake',v)} unit="kcal" infoText="The total calories you plan to consume each day"/>
+
+                  <Slider label="Daily Calorie Burn" min={100} max={2000} step={50} value={formData.dailyCalorieBurn} 
+                  onChange={(v)=>updateField('dailyCalorieBurn',v)} unit="kcal" infoText="The total calories you aim to burn through exercise and actiity each day"/>
+                </div>
+              </div>
 
             </div>
           )}
